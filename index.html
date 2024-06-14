@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Styles Example</title>
+    <!-- Google Web Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+    <style>
+        /* CSS Styles */
+        .fancy-font {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2E8B57;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .shadow {
+            text-shadow: 2px 2px #FF0000;
+        }
+        .web-font {
+            font-family: 'Lobster', cursive;
+            font-size: 24px;
+            color: #4169E1;
+        }
+        #dynamicText {
+            font-size: 24px;
+        }
+        .original {
+            font-size: 24px;
+            color: black;
+        }
+        .new-style {
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            color: #FF4500;
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Static Text Styles -->
+    <p class="fancy-font">This is a fancy font.</p>
+    <p class="italic">This text is italic.</p>
+    <p class="underline">This text is underlined.</p>
+    <p class="shadow">This text has a shadow.</p>
+    <p class="web-font">This text uses a web font.</p>
+
+    <!-- Dynamic Text Style with JavaScript -->
+    <p id="dynamicText">This text will change style.</p>
+    <button onclick="changeStyle()">Change Style</button>
+
+    <!-- Toggle CSS Class with JavaScript -->
+    <p id="text" class="original">This text will change class.</p>
+    <button onclick="toggleClass()">Toggle Class</button>
+
+    <script>
+        // JavaScript functions to change styles
+        function changeStyle() {
+            const text = document.getElementById('dynamicText');
+            text.style.fontFamily = 'Comic Sans MS, Comic Sans, cursive';
+            text.style.fontWeight = 'bold';
+            text.style.color = '#4B0082';
+            text.style.textShadow = '1px 1px 5px #000000';
+        }
+
+        function toggleClass() {
+            const text = document.getElementById('text');
+            text.classList.toggle('new-style');
+        }
+    </script>
+</body>
+</html>
